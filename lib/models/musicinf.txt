@@ -1,0 +1,231 @@
+import 'dart:convert';
+
+class Musicinfo {
+  int id;
+  int pdfpage;
+  int linkid;
+  String title;
+  String album;  
+  String songURL;
+  String hindiName;  
+  String mname;
+  String msign;
+  String other1;
+  String other2;
+  String ename;
+  String esign; 
+  String language;
+  String songtext;
+  bool favorite;
+  Musicinfo({
+    this.id,
+    this.pdfpage,
+    this.linkid,
+    this.title,
+    this.album,
+    this.songURL,
+    this.hindiName,
+    this.mname,
+    this.msign,
+    this.other1,
+    this.other2,
+    this.ename,
+    this.esign,
+    this.language,
+    this.songtext,
+    this.favorite,
+  });
+
+
+
+      int get getId => id;
+
+      set setId(int id) => this.id = id;
+
+      int get getPdfpage => pdfpage;
+
+      set setPdfpage(int pdfpage) => this.pdfpage = pdfpage;
+
+      int get getLinkid => linkid;
+
+      set setLinkid(int linkid) => this.linkid = linkid;
+
+      String get getAlbum => album;
+
+      set setAlbum(String album) => this.album = album;
+
+      String get getTitle => title;
+
+      set setTitle(String title) => this.title = title;
+
+      String get getSongURL => songURL;
+
+      set setSongURL(String songURL) => this.songURL = songURL;
+
+      String get getMname => mname;
+
+      set setMname(String mname) => this.mname = mname;
+
+      String get getMsign => msign;
+
+      set setMsign(String msign) => this.msign = msign;
+
+      String get getOther1 => other1;
+
+      set setOther1(String other1) => this.other1 = other1;
+
+      String get getOther2 => other2;
+
+      set setOther2(String other2) => this.other2 = other2;
+
+      String get getEname => ename;
+
+      set setEname(String ename) => this.ename = ename;
+
+      String get getLanguage => language;
+
+      set setLanguage(String language) => this.language = language;
+
+      String get getSongtext => songtext;
+
+      set setSongtext(String songtext) => this.songtext = songtext;
+
+      bool get getFavorite => favorite;
+
+      set setFavorite(bool favorite) => this.favorite = favorite;
+
+
+  Musicinfo copyWith({
+    int id,
+    int pdfpage,
+    int linkid,
+    String title,
+    String album,
+    String songURL,
+    String hindiName,
+    String mname,
+    String msign,
+    String other1,
+    String other2,
+    String ename,
+    String esign,
+    String language,
+    String songtext,
+    bool favorite,
+  }) {
+    return Musicinfo(
+      id: id ?? this.id,
+      pdfpage: pdfpage ?? this.pdfpage,
+      linkid: linkid ?? this.linkid,
+      title: title ?? this.title,
+      album: album ?? this.album,
+      songURL: songURL ?? this.songURL,
+      hindiName: hindiName ?? this.hindiName,
+      mname: mname ?? this.mname,
+      msign: msign ?? this.msign,
+      other1: other1 ?? this.other1,
+      other2: other2 ?? this.other2,
+      ename: ename ?? this.ename,
+      esign: esign ?? this.esign,
+      language: language ?? this.language,
+      songtext: songtext ?? this.songtext,
+      favorite: favorite ?? this.favorite,
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'pdfpage': pdfpage,
+      'linkid': linkid,
+      'title': title,
+      'album': album,
+      'songURL': songURL,
+      'hindiName': hindiName,
+      'mname': mname,
+      'msign': msign,
+      'other1': other1,
+      'other2': other2,
+      'ename': ename,
+      'esign': esign,
+      'language': language,
+      'songtext': songtext,
+      'favorite': favorite,
+    };
+  }
+
+  static Musicinfo fromMap(Map<String, dynamic> map) {
+    if (map == null) return null;
+  
+    return Musicinfo(
+      id: map['id'],
+      pdfpage: map['pdfpage'],
+      linkid: map['linkid'],
+      title: map['title'],
+      album: map['album'],
+      songURL: map['songURL'],
+      hindiName: map['hindiName'],
+      mname: map['mname'],
+      msign: map['msign'],
+      other1: map['other1'],
+      other2: map['other2'],
+      ename: map['ename'],
+      esign: map['esign'],
+      language: map['language'],
+      songtext: map['songtext'],
+      favorite: map['favorite'],
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  static Musicinfo fromJson(String source) => fromMap(json.decode(source));
+
+  @override
+  String toString() {
+    return 'Musicinfo(id: $id, pdfpage: $pdfpage, linkid: $linkid, title: $title, album: $album, songURL: $songURL, hindiName: $hindiName, mname: $mname, msign: $msign, other1: $other1, other2: $other2, ename: $ename, esign: $esign, language: $language, songtext: $songtext, favorite: $favorite)';
+  }
+
+  @override
+  bool operator ==(Object o) {
+    if (identical(this, o)) return true;
+  
+    return o is Musicinfo &&
+      o.id == id &&
+      o.pdfpage == pdfpage &&
+      o.linkid == linkid &&
+      o.title == title &&
+      o.album == album &&
+      o.songURL == songURL &&
+      o.hindiName == hindiName &&
+      o.mname == mname &&
+      o.msign == msign &&
+      o.other1 == other1 &&
+      o.other2 == other2 &&
+      o.ename == ename &&
+      o.esign == esign &&
+      o.language == language &&
+      o.songtext == songtext &&
+      o.favorite == favorite;
+  }
+
+  @override
+  int get hashCode {
+    return id.hashCode ^
+      pdfpage.hashCode ^
+      linkid.hashCode ^
+      title.hashCode ^
+      album.hashCode ^
+      songURL.hashCode ^
+      hindiName.hashCode ^
+      mname.hashCode ^
+      msign.hashCode ^
+      other1.hashCode ^
+      other2.hashCode ^
+      ename.hashCode ^
+      esign.hashCode ^
+      language.hashCode ^
+      songtext.hashCode ^
+      favorite.hashCode;
+  }
+}

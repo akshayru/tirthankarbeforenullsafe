@@ -1,0 +1,41 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tirthankar/core/keys.dart';
+
+class LoadingPref extends StatefulWidget<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+        appBar: new AppBar(
+          title: new Text('Demo'),
+        ),
+        body: Center(
+          child: RaisedButton(
+            color: Colors.blueAccent,
+            child: Text('Login'),
+            onPressed: () async {
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return Center(child: CircularProgressIndicator(),);
+                  });
+              await loginAction();
+              Navigator.pop(context);
+            },
+          ),
+        ));
+  }
+
+  Future<bool> loginAction() async {
+    //replace the below line of code with your login request
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await new Future.delayed(const Duration(seconds: 2));
+    localPref = prefs;
+    return true;
+  }
+
+}
+
+mixin HomePage {
+}

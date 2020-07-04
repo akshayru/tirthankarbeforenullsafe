@@ -1,0 +1,105 @@
+class MusicModel {
+  final int id;
+  final String title;
+  final String album;
+  final double duration;
+  final String songURL;
+  final String hName;
+  bool favorite;
+
+  MusicModel({this.id, this.title, this.album, this.duration,this.songURL,this.hName,this.favorite});
+
+  static List<MusicModel> list = [
+    MusicModel(
+      id: 1,
+      title: "Namp 1",
+      album: "Flume",
+      duration: 60,
+      songURL: "https://parshtech-songs-jainmusic.s3.us-east-2.amazonaws.com/Namokar/Namokaar+Mantra+by+Lata+Mangeshkar.mp3",      
+      hName: "Testing 1",
+      favorite: true
+    ),
+    MusicModel(
+      id: 2,
+      title: "Namo 2",
+      album: "Flume - Kai",
+      duration: 60,
+      songURL: "https://parshtech-songs-jainmusic.s3.us-east-2.amazonaws.com/Namokar/Namokar+Mantra+by+Anurasdha+Paudwal.mp3",
+      hName: "Testing 1",
+      favorite: false
+    ),
+    MusicModel(
+      id: 3,
+      title: "Namo 3",
+      album: "Flume - Vic Mensa",
+      duration: 60,
+      songURL: "https://parshtech-songs-jainmusic.s3.us-east-2.amazonaws.com/Namokar/Namokaar+Mantra+by+Lata+Mangeshkar.mp3",
+      hName: "Testing 1",
+      favorite: false
+    ),
+    MusicModel(
+      id: 4,
+      title: "Namo 4",
+      album: "Flume - KUCKA",
+      duration: 60,
+      songURL: "https://parshtech-songs-jainmusic.s3.us-east-2.amazonaws.com/Namokar/Namokar+Mantra+by+Anurasdha+Paudwal.mp3",
+      hName: "Testing 1",
+      favorite: false
+    ),
+    MusicModel(
+      id: 5,
+      title: "Say It",
+      album: "Flume - Tove Lo",
+      duration: 60,
+      songURL: "https://traffic.libsyn.com/voicebot/Jan_Konig_on_the_Jovo_Open_Source_Framework_for_Voice_App_Development_-_Voicebot_Podcast_Ep_56.mp3",
+      hName: "Testing 1",
+      favorite: false
+    ),
+    MusicModel(
+      id: 6,
+      title: "Wall F*ck",
+      album: "Flume",
+      duration: 60,
+      songURL: "https://traffic.libsyn.com/voicebot/Jan_Konig_on_the_Jovo_Open_Source_Framework_for_Voice_App_Development_-_Voicebot_Podcast_Ep_56.mp3",
+      hName: "Testing 1",
+      favorite: false
+    ),
+    MusicModel(
+      id: 7,
+      title: "Pika",
+      album: "Flume",
+      duration: 60,
+      songURL: "https://traffic.libsyn.com/voicebot/Jan_Konig_on_the_Jovo_Open_Source_Framework_for_Voice_App_Development_-_Voicebot_Podcast_Ep_56.mp3",
+      hName: "Testing 1",
+      favorite: false
+    ),
+    MusicModel(
+      id: 8,
+      title: "Mika",
+      album: "Flume",
+      duration: 60,
+      songURL: "https://traffic.libsyn.com/voicebot/Jan_Konig_on_the_Jovo_Open_Source_Framework_for_Voice_App_Development_-_Voicebot_Podcast_Ep_56.mp3",
+      hName: "Testing 1",
+      favorite: false
+    ),
+    MusicModel(
+      id: 9,
+      title: "Pika",
+      album: "Flume",
+      duration: 60,
+      songURL: "https://traffic.libsyn.com/voicebot/Jan_Konig_on_the_Jovo_Open_Source_Framework_for_Voice_App_Development_-_Voicebot_Podcast_Ep_56.mp3",
+      hName: "Testing 1",
+      favorite: false
+    ),
+    MusicModel(
+      id: 10,
+      title: "Rika",
+      album: "Flume",
+      duration: 60,
+      songURL: "https://traffic.libsyn.com/voicebot/Jan_Konig_on_the_Jovo_Open_Source_Framework_for_Voice_App_Development_-_Voicebot_Podcast_Ep_56.mp3",
+      hName: "Testing 1",
+      favorite: false
+    )
+
+  ];
+}
